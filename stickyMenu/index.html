@@ -1,0 +1,39 @@
+sticky menu technique2:required
+js
+=============================================
+<script src="js/jquery.min.js"></script>
+<script>
+$(window).load(function(){
+    $(this).on('scroll', function(){
+        if($(this).scrollTop() > 50){
+            $('.header_area').addClass('sticky');
+        }
+        else{
+            $('.header_area').removeClass('sticky');
+        }
+    })
+})
+</script>
+
+
+css
+======================
+<style>
+.header_area.sticky {
+     position: fixed; 
+    background-color: #000;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 1px solid #b6adad;
+    transition: 0.3s;
+  }
+ 
+  .header_area.sticky .nav-link {
+    font-size: 14px;
+    transition: 0.3s;
+    color:#fff;
+  }
+  
+</style>
