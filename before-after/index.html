@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before After</title>
+    <style>
+        /****method1-----*/
+        h1::before{
+            width:20px;
+            height: 20px;
+            background-color: antiquewhite;
+            content: '';
+            display: block;
+        }
+        h1::after{
+            width:20px;
+            height: 20px;
+            background-color: antiquewhite;
+            content: '';
+            display: block;
+        }
+        /*-------method 2-------*/
+        h2{
+            position: relative;
+            
+        }
+        h2:hover::after{
+            content: attr(data-mycontent); 
+            font-size: 20px;
+            position: absolute;
+            top:0;
+            background-color: aqua;
+            padding: 5px;
+         
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 >Hello Bangladesh</h1>
+    <h2 data-mycontent="Dhaka is the capital">Hello Bangladesh</h2>
+</body>
+</html>
