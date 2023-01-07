@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>child paren -active</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" rel="stylesheet" >
+</head>
+<body>
+    <ul class="list-unstyled nasted_dash_link components">
+
+       
+            <li class="@yield('dashboard')">
+                <a href=""><i class="me-2 fas fa-tachometer-alt "></i>Dashboard</a>
+            </li>
+    
+      
+            <li class="">
+               
+                <a href="#manageUsers" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle @if (ps_module_active('user') == NULL) d-none @endif"><i
+                    class="me-2 fas fa-users bg-danger"></i>Manage Users-test</a>
+
+                <ul class="collapse list-unstyled" id="manageUsers">
+                    <li class="">
+                        <a href="" class="@if (ps_module_active('user_registration') == 0) d-none @endif"><i class="me-2 fas fa-angle-right"></i>Create
+                            User</a>
+                    </li>
+                    <li class="">
+                        <a href=""><i class="me-2 fas fa-angle-right"></i>All Users</a>
+                    </li>
+                </ul>
+            </li>
+    
+    </ul>
+    <script>
+        $(document).ready(function() {
+      $('ul.collapse').children('li').each(function(index){
+        
+        
+        $(this).attr('data-aria',$(this).parent().attr('id'));
+
+      })
+      
+      var parentId = $('.active').data('aria');
+      
+      $('#'+parentId).addClass('show');
+      $('a[href="#'+parentId+'"]').attr('aria-expanded','true');
+        $('#Targeting').collapse({toggle: false});
+    });
+    </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" ></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" ></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multi owl coursel</title>
+</head>
+<body>
+
+    <div id="c5" class="owl-carousel owl-theme">
+        
+      
+            <div class=" hero-slider-item">
+                <div class="card" style="width: 18rem;">
+                    <div class="hero-image text-center"><img src="" class="card-img-top hero-slider-img" alt="..."></div>
+                    <div class="card-body">
+                    <h5 class="card-title">test one</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class=" hero-slider-item">
+                <div class="card" style="width: 18rem;">
+                    <div class="hero-image text-center"><img src="" class="card-img-top hero-slider-img" alt="..."></div>
+                    <div class="card-body">
+                    <h5 class="card-title">test one</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class=" hero-slider-item">
+                <div class="card" style="width: 18rem;">
+                    <div class="hero-image text-center"><img src="" class="card-img-top hero-slider-img" alt="..."></div>
+                    <div class="card-body">
+                    <h5 class="card-title">test one</h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class=" hero-slider-item">
+                <div class="card" style="width: 18rem;">
+                    <div class="hero-image text-center"><img src="" class="card-img-top hero-slider-img" alt="..."></div>
+                    <div class="card-body">
+                    <h5 class="card-title">test one</h5>
+
+                    </div>
+                </div>
+            </div>
+      
+
+      </div>
+    <script>
+        
+        var o5 = $('#c5')
+      o5.owlCarousel({
+        singleItem:true,
+        loop:true,
+        margin:10,
+        navigation :true,
+        touchDrag: true,
+        afterMove: function (elem) {
+          var current = this.currentItem;
+          o4.trigger('owl.goTo',current);
+        },
+        responsive: {
+          0: {
+            items: 2
+          },
+          1000: {
+            items: 2
+          }
+        }
+      });
+  
+        var o1 = $('#c1')
+      o1.owlCarousel({
+        singleItem:true,
+        loop:true,
+        margin:10,
+        navigation :true,
+        touchDrag: true,
+        afterMove: function (elem) {
+          var current = this.currentItem;
+          o1.trigger('owl.goTo',current);
+        },
+        responsive: {
+          0: {
+            items: 1
+          },
+            767: {
+              items: 2
+            },
+          1000: {
+            items: 3
+          }
+        }
+    });
+        var o2 = $('#c2')
+      o2.owlCarousel({
+        singleItem:true,
+        loop:true,
+        margin:10,
+        navigation :true,
+        touchDrag: true,
+        afterMove: function (elem) {
+          var current = this.currentItem;
+          o2.trigger('owl.goTo',current);
+        },
+        responsive: {
+            0: {
+              items: 1
+            },
+            767: {
+              items: 2
+            },
+            1000: {
+              items: 2
+            }
+          }
+    });
+  
+    $(".ps-owl-item").each(function( index ) {
+  
+    $("#"+$( this ).attr('id')).owlCarousel({
+        singleItem:true,
+        loop:true,
+        margin:10,
+        dots: false,
+        nav:true,
+        touchDrag: false,
+        afterMove: function (elem) {
+          var current = this.currentItem;
+          this.trigger('owl.goTo',current);
+        },
+        responsive: {
+            0: {
+              items: 1
+            },
+            767: {
+              items: 2
+            },
+            1000: {
+              items: 3
+            }
+          }
+    });
+  });
+  var o3 = $('#c3')
+      o3.owlCarousel({
+        singleItem:true,
+        loop:true,
+        margin:10,
+        dots: false,
+        nav:true,
+        touchDrag: false,
+        afterMove: function (elem) {
+          var current = this.currentItem;
+          o3.trigger('owl.goTo',current);
+        },
+        responsive: {
+            0: {
+              items: 1
+            },
+            767: {
+              items: 2
+            },
+            1000: {
+              items: 3
+            }
+          }
+    });
+  var o6 = $('#c6')
+      o6.owlCarousel({
+        singleItem:true,
+        loop:true,
+        margin:10,
+        dots: true,
+        nav:false,
+        touchDrag: false,
+        afterMove: function (elem) {
+          var current = this.currentItem;
+          o6.trigger('owl.goTo',current);
+        },
+        responsive: {
+            0: {
+              items: 2
+            },
+            1000: {
+              items: 5
+            }
+          }
+    });
+  
+      </script> 
+</body>
+</html>
